@@ -1,0 +1,323 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a:link{
+    color: red;
+}
+a:visited{
+    color: green;
+}
+a:hover{
+    color: hotpink;
+}
+a:active{
+    color:blue;
+}
+</style>
+</head>
+<body>
+<h2>Styling a link depending on state</h2>
+<p><b><a href="www.google.com" target="_blank">This is a link</a></b></p>
+<p><b>Note:</b>a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+<p><b>Note:</b>a:active MUST come after a:hover in the CSS definition in order to be effective</p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a.highlight:hover{
+    color: burlywood;
+    font-size: 22px;
+}
+</style>
+</head>
+<body>
+    <h2>Pseudo-classes and html classes</h2>
+    <p>When you hover over the first link below,it will change color and font-size</p>
+    <p><a class="highlight" href="https://www.w3schools.com/css/css_pseudo_classes.asp">w3schools</a></p>
+    <p><a href="https://www.instagram.com/">instagram</a></p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background-color: green;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+div:hover {
+  background-color: blue;
+}
+</style>
+</head>
+<body>
+
+<p>Mouse over the div element below to change its background color:</p>
+
+<div>Mouse Over Me</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+div:hover p {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div>Hover over this div element to show the p element
+  <p>Tada! Here I am!</p>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p:first-child {
+  color: blue;
+} 
+</style>
+</head>
+<body>
+
+<p>This is some text.</p>
+<p>This is some text.</p>
+
+<div>
+  <p>This is some text.</p>
+  <p>This is some text.</p>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p i:first-child {
+  color: blue;
+} 
+</style>
+</head>
+<body>
+
+<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p:first-child i {
+  color: blue;
+} 
+</style>
+</head>
+<body>
+
+<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+
+<div>
+  <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+  <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+q:lang(no) {
+  quotes: "~" "~";
+}
+</style>
+</head>
+<body>
+
+<p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+<p>In this example, :lang defines the quotation marks for q elements with lang="no":</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+</style>
+</head>
+<body>
+
+<p>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+</style>
+</head>
+<body>
+
+<p>You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+p::first-line {
+  color: #0000ff;
+  font-variant: small-caps;
+}
+</style>
+</head>
+<body>
+
+<p>You can combine the ::first-letter and ::first-line pseudo-elements to add a special effect to the first letter and the first line of a text!</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1::before {
+  content: url(girl\ image.jpg);
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>The ::before pseudo-element inserts content before the content of an element.</p>
+
+<h1>This is a heading</h1>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1::after {
+  content: url(girl\ image.jpg);
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>The ::after pseudo-element inserts content after the content of an element.</p>
+
+<h1>This is a heading</h1>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+::marker { 
+  color: red;
+  font-size: 23px;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<ol>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+::selection {
+  color: red;
+  background: yellow;
+}
+</style>
+</head>
+<body>
+
+<h1>Select some text on this page:</h1>
+
+<p>This is a paragraph.</p>
+<div>This is some text in a div element.</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
